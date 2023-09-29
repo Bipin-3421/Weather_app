@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3d3434;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: #333333;
+}
+
+.card {
+  border: 2px solid white;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  background: linear-gradient(135deg, #53a7ff, #f4e47f);
+  padding: 40px 35px;
+  border-radius: 25px;
+}
+
+#form {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+/* Search Field */
+
+form input {
+  border: none;
+  outline: none;
+  height: 60px;
+  background: #f5f5f5;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 22px;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+form button {
+  border: 0;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+form button img {
+  width: 20px;
+}
+
+/* for weather view */
+
+.weather_container {
+  text-align: center;
+}
+
+.city {
+  font-size: 50px;
+}
+
+.temp {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.humidity {
+  font-size: 1.5rem;
+}
+
+.wind {
+  font-size: 1.5rem;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+/* For Weather details */
+
+.weather_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.humidity_details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: start;
+}
+
+.wind_details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* For weather error 404 and displaying items */
+.weather_container {
+  display: none;
+}
+
+.error {
+  display: none;
+}
+
+/* media queries and mobile responsiveness */
+
+@media screen and (max-width: 767px) {
+  form input {
+    width: 50%;
+    padding: 0 10px 0;
+  }
+
+  .weather_details {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}

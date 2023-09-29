@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather_App</title>
+  </head>
+  <body>
+    <!-- For Search -->
+    <div class="card">
+      <form id="form">
+        <input
+          type="text"
+          placeholder="Enter the city name"
+          spellcheck="false"
+        />
+        <button class="clickBtn">
+          <img src="assets/search.png" alt="search" />
+        </button>
+      </form>
+
+      <!-- For Error -->
+
+      <div class="error">
+        <p>Invalid City</p>
+      </div>
+
+      <!-- For weather View -->
+      <div class="weather_container">
+        <img src="assets/clear.png" alt="weather" class="weather_Image" />
+        <h1 class="city">Pokhara</h1>
+        <h2 class="temp">22°C</h2>
+
+        <!-- For weather_Details  -->
+
+        <div class="weather_details">
+          <div class="humidity_details">
+            <img src="assets/humidity.png" alt="humid" />
+            <div>
+              <h3 class="humidity">70%</h3>
+              <span>Humidity</span>
+            </div>
+          </div>
+
+          <div class="Wind_Speed">
+            <div class="wind_details">
+              <img src="assets/wind.png" alt="wind" />
+              <div>
+                <h3 class="wind">2.1 Km/hr</h3>
+                <span>Wind Speed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
