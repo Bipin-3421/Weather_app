@@ -24,7 +24,7 @@ const WeatherDetails = async (city) => {
       weatherDisplay.style.display = "block";
       weatherError.style.display = "none";
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       getCity.innerHTML = data.name;
       getTemperature.innerHTML = `${Math.round(data.main.temp)}°C`;
       getHumidity.innerHTML = `${data.main.humidity}%`;
@@ -47,10 +47,11 @@ const WeatherDetails = async (city) => {
   }
 };
 
-clickBtn.addEventListener("click", () => {
+clickBtn.addEventListener("click", (event) => {
   if (inputSearch.value.trim() !== "") {
     WeatherDetails(inputSearch.value);
     inputSearch.value = "";
+    event.preventDefault();
   }
 });
 
